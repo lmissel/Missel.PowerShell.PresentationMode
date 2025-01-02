@@ -1,0 +1,1 @@
+Invoke-ScriptAnalyzer -Path "C:\GitHub\Missel.PowerShell.PresentationMode\Missel.PowerShell.PresentationMode\1.0.0.0\Missel.PowerShell.PresentationMode.psm1" -Fix
