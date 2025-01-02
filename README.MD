@@ -68,7 +68,8 @@ Activates Presentation Mode to keep the system awake and the display on.
 **Syntax:**
 
 ```powershell
-Enable-PresentationMode [-Flags <ThreadExecutionState>] [-LogFile <string>] [-Force] [-Verbose]
+Enable-PresentationMode [[-Flags] <ThreadExecutionState>] [[-LogFile] <String>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 **Example:**
@@ -97,7 +98,8 @@ Enable-PresentationMode -Flags ES_CONTINUOUS, ES_DISPLAY_REQUIRED -Force
 ES_CONTINUOUS
 ```
 
-> [!Important] Ensure `Disable-PresentationMode` is called after enabling it to avoid unintended consequences.
+>[!Important]
+>Ensure `Disable-PresentationMode` is called after enabling it to avoid unintended consequences.
 
 #### Disable-PresentationMode
 
@@ -106,7 +108,7 @@ Deactivates Presentation Mode, allowing the system to revert to its default powe
 **Syntax:**
 
 ```powershell
-Disable-PresentationMode [-LogFile <string>] [-Force] [-Verbose]
+Disable-PresentationMode [[-LogFile] <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 **Example:**
@@ -128,7 +130,7 @@ Displays the current state of Presentation Mode.
 **Syntax:**
 
 ```powershell
-Get-PresentationMode [-LogFile <string>] [-Details] [-Verbose]
+Get-PresentationMode [[-LogFile] <String>] [-Details] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 **Example:**
