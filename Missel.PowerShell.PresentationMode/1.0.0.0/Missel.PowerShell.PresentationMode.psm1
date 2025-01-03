@@ -309,7 +309,7 @@ function Test-LogFilePath {
         if ($PSCmdlet.ShouldProcess($LogFile, "Validate log file path.")) {
             try {
                 # Check if path is fully qualified
-                if (-not [System.IO.Path]::IsPathFullyQualified($LogFile)) {
+                if (-not [System.IO.Path]::IsPathRooted($LogFile)) {
                     throw "The provided LogFile path is not fully qualified: '$LogFile'."
                 }
 
